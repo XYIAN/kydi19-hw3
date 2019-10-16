@@ -20,9 +20,10 @@ $(document).ready(function()
     $("#name").on("change", function()
     {
         name = $("#name").val();
-        $("nameF").html("Hello, " + name +"!");
-        
+        $("#nameF").html("Hello, " + name +"!");
+        alert($("#name").val());
     });//end name
+    
     // function show()
     // {
     //   (f1.sppan)  
@@ -59,6 +60,20 @@ $(document).ready(function()
             $("#f3").css("color", "red");
             $("#f4").html(data.main.humidity+"%");
             $("#f4").css("color", "red");
+            if(units == "imperial")
+            {
+                $("#f5").html(data.wind.speed+"mph");
+                $("#f5").css("color", "red");
+                $("#f1").html(data.main.temp + " F");
+                $("#f1").css("color", "red");
+            }
+            if(units == "metric")
+            {
+                $("#f5").html(data.wind.speed+"km");
+                $("#f5").css("color", "red");
+                $("#f1").html(data.main.temp + " C");
+                $("#f1").css("color", "red");
+            }
             $("#f5").html(data.wind.speed+"mph");
             $("#f5").css("color", "red");
             $("#f6").html(data.sys.sunset);

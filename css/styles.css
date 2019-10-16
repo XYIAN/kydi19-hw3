@@ -10,23 +10,6 @@ body
   justify-content:center;
   
 }
-nav a
-{
-    padding:15px;
-    padding-bottom:4px;
-    font-size: 1.8em; 
-    text-decoration: none;
-    color: white; 
-    border-bottom:2px white solid;
-    
-}
-nav a:hover
-{
-    border-bottom:2px black solid;
-    font-size: 4em;
-    color:red;
-    transition: 1s;
-}
 
 .column 
 {
@@ -41,11 +24,7 @@ nav a:hover
   display: table;
   clear: both;
 }
-main
-{
-    display:flex;
-    justify-content: center;
-}
+
 ul
 {
     width:500px;
