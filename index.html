@@ -27,8 +27,9 @@
             
                 Search Bar: <input id="input1" type="text" value="London"><button id="b1">Search</button>
                 <br>
-                Region:     <select id"region"> 
-                                <option id="o1">Select One</option>
+                Units:     <select id="region"> 
+                                <option id="o1" value="imperial">Imperial</option>
+                                <option id="o2" value="metric">Metric</option>
                             </select>
             
             
@@ -36,11 +37,16 @@
             </fieldset>
             
         
-        Temperature(metric): <div id="f1"> </div>
-        Icon :               <div id="f2"> </div>
-        Pressure:            <div id="f3"> </div>
-        Sea Level:           <div id="f4"> </div>
-        <div id="f5"> </div>
+        Temperature:         <span id="f1"> N/a</span>
+        Icon :               <span id="icon"><img id="wicon" src="" alt="Weather icon"></span>
+        Pressure:            <span id="f3"> N/a</span>
+        Humidity:            <span id="f4"> N/a</span>
+        Wind Speed:          <span id="f5"> N/a</span>
+        <br>
+        SunRise:             <span id="f6"> N/a</span>
+        SunSet:              <span id="f7"> N/a</span>
+        <br>
+        Description          <span id="f8"> N/a</span>
         
     </body>
 
