@@ -16,9 +16,21 @@
 
 $(document).ready(function()
 {
+    var name = $("#name").val();
+    $("#name").on("change", function()
+    {
+        name = $("#name").val();
+        $("nameF").html("Hello, " + name +"!");
+        
+    });//end name
+    // function show()
+    // {
+    //   (f1.sppan)  
+    // };
+    
     $("#b1").on("click",function()
     {
-        alert("search button clicked " + $("#input").length);
+        alert("searchS button clicked " + $("#input").length);
         // if($("#input1").length > 2)
         // {
         var searchBar = $("#input1").val();
@@ -26,14 +38,16 @@ $(document).ready(function()
         $.ajax({
     
         method: "GET",
-        url: "https://samples.openweathermap.org/data/2.5/weather?q="+searchBar+"&appid=b6907d289e10d714a6e88b30761fae22",
+        url:"https://api.openweathermap.org/data/2.5/weather?q="+searchBar+"&units=imperial&appid=876349ecdd8f244418c417cf7684cced",
         dataType: "json",
-        success: function(result,status)
+        success: function(data)
         {
-            alert(result.main.temp);
-            $("#f1").html(result.main.temp);
-            $("#region").append("<option>" + result.main+ "</option>");
-            $("#f2").html(result.main.icon);
+            console.log(data); 
+            alert("please work:(");
+            //alert(data.weather[0].main);
+            $("#f1").html(data.main.temp);
+            $("#region").append("<option>" + data.main + "</option>");
+            $("#f2").html(data.weather.icon);
             
         }
         
